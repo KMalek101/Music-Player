@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Music Player</title>
+</head>
+<body>
+    <img class="bg" src="src/bg.jpg" alt="background-image">
+
+    <div class="container">
+        <img class="cover" src="src/cover-1.png">
+
+        <div class="description">
+            <h3 id="songName" >Lost in the City Lights</h3>
+            <p id="songAuthor" >Cosmo Sheldrake</p>
+        </div>
+
+        <div class="current-time-duration">
+            <p id="currentTime"></p>
+            <p id="duration"></p>
+        </div>
+        <audio id="lullaby" src="src/forest-lullaby-110624.mp3" ></audio>
+        <audio id="city-lights" src="src/lost-in-city-lights-145038.mp3"></audio>
+
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+        </div>
+        
+        <div class="playing-options">
+            <div class="before-after" onclick="prev()">    
+                <svg class="before-after" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.8136 14.2517L23.6953 10.9841C25.0284 10.2435 26.6666 11.2074 26.6666 12.7324V19.2676C26.6666 20.7926 25.0284 21.7566 23.6953 21.016L17.8136 17.7483C16.442 16.9863 16.442 15.0137 17.8136 14.2517Z" fill="#4D5562"/>
+                    <path d="M10.6666 22.6667L10.6666 9.33335" stroke="#4D5562" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M5.33325 22.6667L5.33325 9.33335" stroke="#4D5562" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <button onclick="playSong()" class="play-stop">
+                <svg  width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.941 14.244L14.119 10.236C12.686 9.50176 11 10.5696 11 12.2115V19.7885C11 21.4304 12.686 22.4982 14.119 21.764L21.941 17.756C23.353 17.0325 23.353 14.9675 21.941 14.244Z" fill="#E5E7EB"/>
+                </svg>
+            </button>
+            <div class="before-after second" onclick="next()">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.1864 14.2517L8.30466 10.9841C6.9716 10.2435 5.33337 11.2074 5.33337 12.7324V19.2676C5.33337 20.7926 6.9716 21.7566 8.30466 21.016L14.1864 17.7483C15.558 16.9863 15.558 15.0137 14.1864 14.2517Z" fill="#4D5562"/>
+                    <path d="M21.3334 22.6667L21.3334 9.33335" stroke="#4D5562" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M26.6667 22.6667L26.6667 9.33335" stroke="#4D5562" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <script src="script.js"></script>
+        </div>
+    </div>
+</body>
+</html>
